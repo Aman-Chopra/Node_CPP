@@ -6,6 +6,10 @@
   "scripts": {
     "start": "electron index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aman-Chopra/Node_CPP"
+  },
   "author": "Aman Chopra",
   "license": "MIT",
   "devDependencies": {
