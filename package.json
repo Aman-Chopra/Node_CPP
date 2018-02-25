@@ -4,7 +4,10 @@
   "description": "Electron Desktop app",
   "main": "index.js",
   "scripts": {
-    "start": "electron index.js"
+    "start": "electron index.js",
+    "package": "asar pack Cryon.app/Contents/Resources/app Cryon.app/Contents/Resources/app.asar",
+    "build": "electron-packager . Cryon && cp Icon.icns Cryon-darwin-x64/Cryon.app/Contents/Resources/electron.icns",
+    "test": "electron-packager . Cryon --ignore=node_modules/electron-* && cp Icon.icns Cryon-darwin-x64/Cryon.app/Contents/Resources/atom.icns"
   },
   "repository": {
     "type": "git",
@@ -13,7 +16,10 @@
   "author": "Aman Chopra",
   "license": "MIT",
   "devDependencies": {
+    "asar": "^0.14.2",
     "electron": "1.7.11",
+    "electron-debug": "^1.5.0",
+    "electron-packager": "^11.0.1",
     "electron-rebuild": "^1.7.3"
   },
   "dependencies": {

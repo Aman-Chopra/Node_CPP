@@ -1,6 +1,7 @@
 'use strict';
 
 const electron = require('electron')
+//require('electron-debug')({showDevTools: true});
 
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
@@ -15,4 +16,5 @@ let mainWindow
 app.on('ready', () => {
     mainWindow = new BrowserWindow({width:800, height:600})
     mainWindow.loadURL(`file://${__dirname}/index.html`)
+    mainWindow.webContents.openDevTools()
 })
